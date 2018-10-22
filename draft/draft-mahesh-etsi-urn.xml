@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="US-ASCII"?>
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd">
-<?rfc toc="no"?>
+<?rfc toc="yes"?>
 <?rfc tocompact="no"?>
 <?rfc tocdepth="6"?>
 <?rfc symrefs="yes"?>
 <?rfc sortrefs="yes"?>
-<rfc category="info" docName="draft-mahesh-etsi-urn-01" ipr="trust200902">
+<rfc category="info" docName="draft-mahesh-etsi-urn-04" ipr="trust200902">
   <front>
     <title abbrev="Namespace for ETSI">URN Namespace for ETSI
     Documents</title>
 
     <author fullname="Mahesh Jethanandani" initials="M."
             surname="Jethanandani">
-      <organization/>
+      <organization>VMware</organization>
 
       <address>
         <postal>
@@ -64,12 +64,12 @@
       </address>
     </author>
 
-    <date day="26" month="May" year="2018"/>
+    <date day="22" month="October" year="2018"/>
 
     <abstract>
       <t>This document describes the Namespace Identifier (NID) 'etsi' for
       Uniform Resource Names (URNs) used to identify resources published by
-      European Telecommuncations Standards Instititue (http://etsi.org). ETSI
+      European Telecommunications Standards Institute (http://etsi.org). ETSI
       specifies and manages resources that utilize this URN identification
       model. Management activities for these and other resources types are
       handled by the manager of the ETSI Protocol Naming and Numbering Service
@@ -82,7 +82,7 @@
       <t>ETSI is a nonprofit international industry standards organization,
       that produces globally acceptable standards for Information &amp;
       Communication Technologies including fixed, mobile, radio, broadcast,
-      internet, aeornautical and other areas.</t>
+      internet, aeronautical and other areas.</t>
 
       <t>As part of these specifications efforts, there is a need to identify
       identifiers in a managed namespace that are unique and persistent. To
@@ -100,7 +100,11 @@
 
           <c>ETSI</c>
 
-          <c>European Telecommunications Standards Instititue</c>
+          <c>European Telecommunications Standards Institute</c>
+
+          <c>EUN</c>
+
+          <c>ETSI URN Namespace</c>
 
           <c>NID</c>
 
@@ -112,11 +116,15 @@
 
           <c>PNNS</c>
 
-          <c>Protocol Name and Numbering Service</c>
+          <c>ETSI Protocol Name and Numbering Service</c>
 
           <c>RDS</c>
 
           <c>Resolution Discovery System</c>
+
+          <c>URI</c>
+
+          <c>Uniform Resouce Identifier</c>
 
           <c>URN</c>
 
@@ -126,43 +134,49 @@
     </section>
 
     <section title="URN Specification for ETSI">
-      <t>Namespace ID:</t>
+      <t>Namespace Identifier:</t>
 
       <t><list>
           <t>etsi</t>
         </list></t>
 
-      <t>Registration information:</t>
+      <t>Version:</t>
 
       <t><list>
-          <t>registration version number: 1</t>
-
-          <t>registration date: 2018-05-25</t>
+          <t>1</t>
         </list></t>
 
-      <t>Declared registrant of the namespace:</t>
+      <t>Date:</t>
 
       <t><list>
-          <t>Registering organization</t>
-
-          <t><list>
-              <t>Name: European Telecommuncations Standards Institute
-              (ETSI)</t>
-
-              <t>Address: 650, Route des Lucioles, Sophia Antipolis 06560,
-              France</t>
-            </list></t>
-
-          <t>Designated contact:</t>
-
-          <t><list>
-              <t>Role: ETSI Protocol Naming and Numbering Service (PNNS)</t>
-
-              <t>Email: pnns@etsi.org</t>
-            </list></t>
+          <t>2018-10-22</t>
         </list></t>
 
-      <t>Declaration of syntactic structure:</t>
+      <t>Registrant:</t>
+
+      <t><list>
+          <t>ETSI Protocol Naming and Numbering Service (PNNS)</t>
+
+          <t>European Telecommunications Standards Institute (ETSI)</t>
+
+          <t>650, Route des Lucioles, Sophia Antipolis 06560, France</t>
+
+          <t>pnns@etsi.org</t>
+        </list></t>
+
+      <t>Purpose:</t>
+
+      <t>The Namespace Identifier (NID) 'etsi' for Uniform Resource Names
+      (URNs) will be used to identify resources published by ETSI. These might
+      include published standards or protocols that it defines and which make
+      use of URNs. These namespaces are globally unique. The URN namespace
+      will be used in public networks by clients to configure and manage
+      resources in the network. It is the servers that will enforce the
+      uniqueness of the namespaces by using the namespace and the XPath
+      associated with the managed node in the network, when accessing a
+      resource.</t>
+
+      <t>Syntax:</t>
 
       <t><list>
           <t>The syntax of namespace specific strings for the 'etsi' namespace
@@ -170,63 +184,68 @@
           (URNs)</xref>.</t>
         </list></t>
 
-      <t>Relevant ancillary documentation:</t>
+      <t>The entire URN is case-insensitive.</t>
+
+      <t>Assignment:</t>
 
       <t><list>
-          <t>ETSI publishes information regarding the registered resources in
-          the ETSI URN Namespace (EUN) registry
-          (https://portal.etsi.org/PNNS/GenericAllocation/ETSIURNNamespace.aspx).</t>
-        </list></t>
+          <t>ETSI will maintain the list of registered subtrees that use the
+          "etsi" NID at
+          https://portal.etsi.org/PNNS/GenericAllocation/ETSIURNNamespace.aspx,
+          in the ETSI URN Namespace (EUN) registry. It will describe the
+          &lt;NSS&gt;, how the namespaces will be allocated, and how
+          experimental namespaces can be used within the allocated URN.</t>
 
-      <t>Identifier uniqueness considerations:</t>
-
-      <t><list>
           <t>ETSI will manage resource classes using the "etsi" NID and will
           be the authority for managing resources and associated subsequent
-          strings. ETSI is expected to guarantee the uniqueness of the strings
+          strings. ETSI will guarantee the uniqueness of the strings
           themselves, or it may permit secondary responsibility for certain
-          defined resources.</t>
+          defined resources. Once a subtree assignment is made, it cannot be
+          reassigned.</t>
 
-          <t>ETSI could allow for use of experimental type values for testing
-          purposes only. Note that using experimental types may create
-          collision as multiple users may use the same values for different
-          resources and specific strings.</t>
+          <t>ETSI may allow for use of experimental type values in specific
+          subtrees, for testing purposes only. Note that using experimental
+          types may create collision as multiple users may use the same values
+          for different resources and specific strings. All experimentation
+          must follow the guidance set forth in <xref target="RFC6963">A
+          Uniform Resource Name (URN) Namespace for Examples</xref>.</t>
         </list></t>
 
-      <t>Identifier persistence considerations:</t>
+      <t>Security and Privacy:</t>
+
+      <t>If a namespace is URN-equivalent to another namespace used by a
+      server, as per the rules specified in Section 3.1 of <xref
+      target="RFC8141">URNs</xref>, Section 6.1 of <xref target="RFC3986">URI
+      Generic Syntax</xref>, and the lexical rules specified in this document,
+      the network management request is rejected. For example, this request
+      could be in the form of a network management request using <xref
+      target="RFC7950">YANG</xref>.</t>
+
+      <t>The YANG modules that will initially use this URN namespace define a
+      schema for data that is designed to be accessed via a network management
+      protocol such as <xref target="RFC6241">NETCONF</xref> or <xref
+      target="RFC8040">RESTCONF</xref>. The lowest NETCONF layer is the secure
+      transport layer, and the mandatory-to-implement secure transport is
+      <xref target="RFC6242">Secure Shell (SSH)</xref>. The lowest RESTCONF
+      layer is HTTPS, and the mandatory-to-implement secure transport is <xref
+      target="RFC8446">TLS</xref>.</t>
+
+      <t>Interoperability:</t>
+
+      <t>There are no known interoperability issues at this time.</t>
+
+      <t>Resolution:</t>
 
       <t><list>
-          <t>ETSI will update the ETSI URN Namespace (EUN) registry to
-          document the registered resources that will use the "etsi" NID.</t>
+          <t>It is not foreseen that URNs within this namespace will undergo
+          resolution.</t>
         </list></t>
 
-      <t>Process of identifier assignment:</t>
+      <t>Documentation:</t>
 
       <t><list>
-          <t>Assignment of a URN from the ETSI namespace will be documented as
-          part of the ETSI URN Namespace (EUN) registry.</t>
-        </list>Process of identifier resolution:</t>
-
-      <t><list>
-          <t>The namespace is not listed with an Resolution Discovery System
-          (RDS). Therefore this process is not relevant.</t>
-        </list>Rules for Lexical Equivalence:</t>
-
-      <t><list>
-          <t>The entire URN is case-insensitive.</t>
-        </list>Conformance with URN Syntax:</t>
-
-      <t><list>
-          <t>No special considerations</t>
-        </list>Validation mechanism:</t>
-
-      <t><list>
-          <t>None specified. URN assignment will be handled by procedures
-          implemented in support of ETSI activities.</t>
-        </list>Scope:</t>
-
-      <t><list>
-          <t>Global</t>
+          <t>Documentation can be found at
+          https://portal.etsi.org/PNNS/GenericAllocation/ETSIURNNamespace.aspx.</t>
         </list></t>
     </section>
 
@@ -235,26 +254,30 @@
       assign:</t>
 
       <t><list>
-          <t>urn:etsi:yang:etsi-services</t>
+          <t>urn:etsi:yang:etsi-nfv</t>
 
-          <t>urn:etsi:yang:etsi-interfaces</t>
+          <t>urn:etsi:yang:etsi-nfv-vnf</t>
+
+          <t>urn:etsi:yang:etsi-nfv-pnf</t>
         </list></t>
+
+      <t>Although all of these examples are related to network management with
+      <xref target="RFC7950">YANG</xref>, URNs related to other kinds of
+      resources might be assigned in the future, in which case a
+      "sub-identifier" other than "yang" might be created.</t>
     </section>
 
     <section title="Security Considerations">
       <t>There are no additional security considerations other than those
-      normally associated with the use and resolution of URNs in general,
-      which are described in <xref target="RFC1737">Function Requirements for
-      URN</xref>, <xref target="RFC8141">Uniform Resource Names (URNs)
-      </xref>.</t>
+      described above, and are normally associated with the use and resolution
+      of URNs in general, which are described in <xref
+      target="RFC1737">Function Requirements for URN</xref>, <xref
+      target="RFC8141">Uniform Resource Names (URNs) </xref>.</t>
     </section>
 
     <section anchor="IANA" title="IANA Considerations">
-      <t>This document adds a new entry ("etsi") in the urn-namespace
-      registry. This is the defining document. When published, the entry can
-      be found in the "Uniform Resource Names (URN) Namespaces" registry
-      available from the IANA site (http://www.iana.org) and any associated
-      mirrors.</t>
+      <t>IANA is requested to register the formal URN namespace "etsi" using
+      the template given above in Section 2.</t>
     </section>
   </middle>
 
@@ -262,9 +285,25 @@
     <references title="Normative References">
       <?rfc include='reference.RFC.1737'?>
 
+      <?rfc include='reference.RFC.6963'?>
+
       <?rfc include='reference.RFC.8141'?>
 
       <?rfc ?>
+    </references>
+
+    <references title="Informative References">
+      <?rfc include='reference.RFC.3986'?>
+
+      <?rfc include='reference.RFC.6241'?>
+
+      <?rfc include='reference.RFC.6242'?>
+
+      <?rfc include='reference.RFC.7950'?>
+
+      <?rfc include='reference.RFC.8040'?>
+
+      <?rfc include='reference.RFC.8446'?>
     </references>
   </back>
 </rfc>
