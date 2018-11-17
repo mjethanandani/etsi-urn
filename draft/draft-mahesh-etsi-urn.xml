@@ -5,7 +5,7 @@
 <?rfc tocdepth="6"?>
 <?rfc symrefs="yes"?>
 <?rfc sortrefs="yes"?>
-<rfc category="info" docName="draft-mahesh-etsi-urn-04" ipr="trust200902">
+<rfc category="info" docName="draft-mahesh-etsi-urn-05" ipr="trust200902">
   <front>
     <title abbrev="Namespace for ETSI">URN Namespace for ETSI
     Documents</title>
@@ -64,7 +64,7 @@
       </address>
     </author>
 
-    <date day="22" month="October" year="2018"/>
+    <date day="17" month="November" year="2018"/>
 
     <abstract>
       <t>This document describes the Namespace Identifier (NID) 'etsi' for
@@ -116,7 +116,7 @@
 
           <c>PNNS</c>
 
-          <c>ETSI Protocol Name and Numbering Service</c>
+          <c>Protocol Name and Numbering Service</c>
 
           <c>RDS</c>
 
@@ -124,7 +124,7 @@
 
           <c>URI</c>
 
-          <c>Uniform Resouce Identifier</c>
+          <c>Uniform Resource Identifier</c>
 
           <c>URN</c>
 
@@ -199,9 +199,10 @@
           <t>ETSI will manage resource classes using the "etsi" NID and will
           be the authority for managing resources and associated subsequent
           strings. ETSI will guarantee the uniqueness of the strings
-          themselves, or it may permit secondary responsibility for certain
+          themselves, by validating it against the existing content of the
+          registry. It may also permit secondary responsibility for certain
           defined resources. Once a subtree assignment is made, it cannot be
-          reassigned.</t>
+          deleted or reassigned.</t>
 
           <t>ETSI may allow for use of experimental type values in specific
           subtrees, for testing purposes only. Note that using experimental
@@ -210,25 +211,6 @@
           must follow the guidance set forth in <xref target="RFC6963">A
           Uniform Resource Name (URN) Namespace for Examples</xref>.</t>
         </list></t>
-
-      <t>Security and Privacy:</t>
-
-      <t>If a namespace is URN-equivalent to another namespace used by a
-      server, as per the rules specified in Section 3.1 of <xref
-      target="RFC8141">URNs</xref>, Section 6.1 of <xref target="RFC3986">URI
-      Generic Syntax</xref>, and the lexical rules specified in this document,
-      the network management request is rejected. For example, this request
-      could be in the form of a network management request using <xref
-      target="RFC7950">YANG</xref>.</t>
-
-      <t>The YANG modules that will initially use this URN namespace define a
-      schema for data that is designed to be accessed via a network management
-      protocol such as <xref target="RFC6241">NETCONF</xref> or <xref
-      target="RFC8040">RESTCONF</xref>. The lowest NETCONF layer is the secure
-      transport layer, and the mandatory-to-implement secure transport is
-      <xref target="RFC6242">Secure Shell (SSH)</xref>. The lowest RESTCONF
-      layer is HTTPS, and the mandatory-to-implement secure transport is <xref
-      target="RFC8446">TLS</xref>.</t>
 
       <t>Interoperability:</t>
 
@@ -268,11 +250,11 @@
     </section>
 
     <section title="Security Considerations">
-      <t>There are no additional security considerations other than those
-      described above, and are normally associated with the use and resolution
-      of URNs in general, which are described in <xref
-      target="RFC1737">Function Requirements for URN</xref>, <xref
-      target="RFC8141">Uniform Resource Names (URNs) </xref>.</t>
+      <t>There are no additional security considerations that are normally
+      associated with the use and resolution of URNs in general, which are
+      described in <xref target="RFC1737">Function Requirements for
+      URN</xref>, <xref target="RFC8141">Uniform Resource Names (URNs)
+      </xref>.</t>
     </section>
 
     <section anchor="IANA" title="IANA Considerations">
@@ -293,17 +275,7 @@
     </references>
 
     <references title="Informative References">
-      <?rfc include='reference.RFC.3986'?>
-
-      <?rfc include='reference.RFC.6241'?>
-
-      <?rfc include='reference.RFC.6242'?>
-
       <?rfc include='reference.RFC.7950'?>
-
-      <?rfc include='reference.RFC.8040'?>
-
-      <?rfc include='reference.RFC.8446'?>
     </references>
   </back>
 </rfc>
